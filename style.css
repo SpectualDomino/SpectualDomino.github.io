@@ -1,0 +1,72 @@
+header{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color:gold;
+    -webkit-text-stroke: 1px rgb(25,128,93);
+}
+footer{
+    bottom: 0%;
+    position: fixed;
+    width: 100%;
+    font-size: 30px;
+    color:gold;
+    -webkit-text-stroke: 1px rgb(25,128,93);
+}
+#footer {
+    height: 100px;
+    margin: auto;
+    width: 400px;
+    text-align:center;
+}
+#container{
+    height: 320px;
+    color: white;
+}
+body{
+    background-color: rgb(21, 194, 136);
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 2px black;
+}
+button{  
+    border: 1px gold solid;
+    background-color: rgb(16, 143, 101);
+    color: white;
+    height: 40px;
+    width: 200px;
+    border-radius: 25px;
+    margin: 40px;
+    height: fit-content;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 3px black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:link,a:visited,a:hover,a:focus,a:active{
+    color: white;
+}
+img{
+    max-width: 400px;
+}
+#scores{
+    position: fixed;
+    top: 0;
+    color:white;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 20px;
+    padding: 10px;
+}
+#rules{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+#question{
+    font-size: 20px;
+}

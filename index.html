@@ -5,76 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Managing Credit</title>
-    <style>
-        header{
-            font-size: 40px;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            color:gold;
-            -webkit-text-stroke: 1px rgb(25,128,93);
-        }
-        footer{
-            position: absolute;
-            bottom: 5%;
-            left: 43%;
-            font-size: 25px;
-            display: flex;
-            justify-content:center;
-            align-content:center;
-            color:gold;
-            -webkit-text-stroke: 1px rgb(25,128,93);
-        }
-        #container{
-            height: 320px;
-        }
-        body{
-            background-color: rgba(33, 235, 167,0.8);
-            
-        }
-        #StartMenu{
-            display: block;
-            margin: 40px;
-        }
-        button{
-            
-            border: 1px gold solid;
-            background-color: rgb(16, 143, 101);
-            color: white;
-            height: 40px;
-            width: 200px;
-            border-radius: 25px;
-        }
-        .difBtn{
-            display: contents;
-            height: fit-content;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header><h1>Managing Credit</h1></header>
+    <button id="rules">Rules</button>
     <div id="container">
-        <center><p>Choose the difficulty</p></center>
+        <center><p style="font-size: 30px;">Choose the difficulty</p></center>
+        <center style="font-size: 20px;">Always Start with $600 and a Limit of $5000</center>
         <center>
             <div>
-                <button class="difBtn">
+                <button class="difBtn" onclick="chooseDifficulty(600,500,700,0)">
                     <h1>Easy</h1>
-                    <p></p>
+                    <p>Start with $500 debt, 700 credit score, and 0 missed payments</p>
                 </button>
-                <button class="difBtn">
+                <button class="difBtn" onclick="chooseDifficulty(600,1000,600,2)">
                     <h1>Medium</h1>
-                    <p></p>
+                    <p>Start with $1000 debt, 600 credit score, and 2 missed payments</p>
                 </button>
-                <button class="difBtn">
+                <button class="difBtn"
+                onclick="chooseDifficulty(600,1500,500,4)">
                     <h1>Hard</h1>
-                    <p></p>
+                    <p>Start with $1500 debt, 500 credit score, and 4 missed payments</p>
                 </button>
-            </div>
-        </center>
-        <center><div id="StartMenu">
-            <button>Start</button>
-        </div></center>
-    </div>
-    <footer><h5>Created by Will Domine</h5></footer>   
+                <center><img src="img/favicon.png" alt="creditCard"></center>
+    <footer><h5 id="footer">Created by Will Domine</h5></footer>   
+    <script src="code.js"></script>
 </body>
 </html>
