@@ -25,7 +25,7 @@ footer{
     color: white;
 }
 body{
-    background-color: rgb(21, 194, 136);
+    background-color: rgb(4, 68, 47);
     letter-spacing: 5px;
     text-shadow: 1px 1px 2px black;
 }
@@ -69,17 +69,37 @@ img{
     padding: 10px;
 }
 #question{
-    font-size: 20px;
+    font-size: 25px;
 }
 #start{
     padding: 20px;
     font-size: 20px;
 }
-#a1Btn{
-    width: 300px;
+#a1Btn,#a2Btn{
     padding: 50px;
+    width: 300px;
 }
-#a2Btn{
-    width: 300px;
-    padding: 50px;
+
+#a1,#a2{
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+#payDebt{
+    margin-left: 0px;
+    height: 40px;
+    width: 100px;
+    border-radius: 0px;
+}
+#payBtnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+#removeDebt{
+    height: 36px;
+    margin: 40px ;
+    margin-right: 0px;
+    border: 1px gold solid;
+    background-color: rgb(16, 143, 101);
+    color: white;
 }
