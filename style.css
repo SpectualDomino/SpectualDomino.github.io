@@ -56,10 +56,11 @@ img{
     top: 0;
     color:white;
     font-size: 30px;
-    border: 1px solid black;
+    border: 1px solid gold;
+    background-color: rgb(16, 143, 101);
     border-radius: 25px;
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 #rules{
     position: fixed;
@@ -69,4 +70,16 @@ img{
 }
 #question{
     font-size: 20px;
+}
+#start{
+    padding: 20px;
+    font-size: 20px;
+}
+#a1Btn{
+    width: 300px;
+    padding: 50px;
+}
+#a2Btn{
+    width: 300px;
+    padding: 50px;
 }

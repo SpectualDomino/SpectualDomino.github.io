@@ -9,12 +9,14 @@
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 
 </head>
-<body onload=updateBal()>
-    <header><h1>Turn 1</h1></header>
+<body onload="refresh()">
+    <header><h1 id="turnTxt"></h1></header>
+
     <button id="rules">Rules</button>
+
     <div id="scores">
         <div id="balance"></div>
-        <div id="money"></div>
+        <div id="debt"></div>
         <div id="credit"></div>
         <div id="limit"></div>
         <div id="missedP"></div>
@@ -23,10 +25,14 @@
 
     <div id="container">
         <center>
-            <p id="question">You need to buy a car</p>
-            <button>
-                <h1>Option</h1>
-                <p id="a1">$5,000 car loan for 5 turns</p>
+            <p id="question"></p>
+            <button id="a1Btn">
+                <h1>Option 1</h1>
+                <p id="a1"></p>
+            </button>
+            <button id="a2Btn">
+                <h1>Option 2</h1>
+                <p id="a2"></p>
             </button>
             
         </center>
