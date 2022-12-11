@@ -4,22 +4,9 @@ header{
     justify-content: center;
     align-content: center;
     color:gold;
-    -webkit-text-stroke: 1px rgb(25,128,93);
+
 }
-footer{
-    bottom: 0%;
-    position: fixed;
-    width: 100%;
-    font-size: 30px;
-    color:gold;
-    -webkit-text-stroke: 1px rgb(25,128,93);
-}
-#footer {
-    height: 100px;
-    margin: auto;
-    width: 400px;
-    text-align:center;
-}
+
 #container{
     height: 100%;
     color: white;

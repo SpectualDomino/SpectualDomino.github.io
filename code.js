@@ -38,7 +38,7 @@ function openRules(){
     let rulesTxt = document.createElement("p")
     let closeBtn = document.createElement("button")
     closeBtn.innerHTML = "X"
-    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $500 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life."
+    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life."
     newTitle.innerHTML = "Managing Credit"
     newDiv.id = "newDiv"
     closeBtn.id = "closeRules"
@@ -60,7 +60,6 @@ PayDebt.onclick = function(){
         data.debt -= parseInt(removeDebt.value)
         if(data.payments < data.turn && (data.debt * 0.05) <= parseInt(removeDebt.value)){
             data.payments += 1
-            console.log(data.payments)
         }
     }
     refresh()
@@ -100,8 +99,8 @@ function gameManager(){
         break;
         case 3:{
             questionTxt.innerHTML = "Sense you got a car loan you've worked harder and got a raise and offer"
-            a1.innerHTML = "Take Offer make $600 per turn"
-            a2.innerHTML = "Take Raise 50% chance of $550 or $650"
+            a1.innerHTML = "Take Offer make $500 per turn"
+            a2.innerHTML = "Take Raise 50% chance of $450 or $550"
         }
         break;
         case 4:{
@@ -135,7 +134,7 @@ function gameManager(){
         }
         break;
     }
-    add("balance",(500+data.payIncrease))
+    add("balance",(400+data.payIncrease))
     Interest("debt","apr")
     if(data.turn % 2 == 0){
         calcCreditScore("creditScore","debt","turn","payments","limit")
@@ -256,7 +255,6 @@ a2Btn.onclick = function(){
         break;
         case 5:{
             randNum = Math.round((Math.random() * 4))
-            console.log(randNum)
             if(randNum < 1){
                 add("balance",3000)
             }
