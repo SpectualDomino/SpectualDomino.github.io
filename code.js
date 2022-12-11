@@ -38,7 +38,7 @@ function openRules(){
     let rulesTxt = document.createElement("p")
     let closeBtn = document.createElement("button")
     closeBtn.innerHTML = "X"
-    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life."
+    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life.\n8. Every Turn your APR is added to your debt."
     newTitle.innerHTML = "Managing Credit"
     newDiv.id = "newDiv"
     closeBtn.id = "closeRules"
@@ -93,7 +93,7 @@ function gameManager(){
         break;
         case 2:{
             questionTxt.innerHTML = "You need to get a loan choose"
-            a1.innerHTML = "Car loan for $3,000 but APR will +2% if credit score is less than 550 its 4%"
+            a1.innerHTML = "Car loan for $2,000 but APR will +2% if credit score is less than 550 its 4%"
             a2.innerHTML = "Car loan for $1,000 but APR will +4% if credit score is less than 550 its 6%"
         }
         break;
@@ -152,7 +152,7 @@ a1Btn.onclick = function(){
         }
         break;
         case 2:{
-            add("debt",3000)
+            add("debt",2000)
             if(data.creditScore >= 550){
                 add("apr", 2)
             }
@@ -288,6 +288,11 @@ a2Btn.onclick = function(){
             gameManager()
         }
         break;
+        case 9:{
+            refresh()
+            open("gameOver.html","_self")
+        }
+
     }
     
 }
@@ -299,6 +304,7 @@ function startGame(){
 }
 
 function refresh(){ 
+    removeDebt.style.height.value = PayDebt.style.height.value
     //Lose the Game
     if(data.creditScore <= 300 && data.turn > 1 || data.limit < data.debt && data.turn > 1){
         open("gameOver.html","_self")
