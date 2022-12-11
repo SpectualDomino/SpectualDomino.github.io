@@ -2,7 +2,7 @@
 
 var data = {
     balance: 0,
-    debt:2000,
+    debt:1500,
     limit:0,
     creditScore:0,
     turn:0,
@@ -38,7 +38,7 @@ function openRules(){
     let rulesTxt = document.createElement("p")
     let closeBtn = document.createElement("button")
     closeBtn.innerHTML = "X"
-    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life.\n8. Every Turn your APR is added to your debt."
+    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life.\n8. Every Turn your APR is added to your debt.\n9. You have 8 Turns to win"
     newTitle.innerHTML = "Managing Credit"
     newDiv.id = "newDiv"
     closeBtn.id = "closeRules"
@@ -133,6 +133,10 @@ function gameManager(){
             a2.innerHTML = "If your creidt score is over 600 -$2000 debt else -$1000 debt"
         }
         break;
+        case 9 :{
+            refresh()
+            open("gameOver.html","_self")
+        }
     }
     add("balance",(400+data.payIncrease))
     Interest("debt","apr")
@@ -204,6 +208,11 @@ a1Btn.onclick = function(){
                 subtract("apr",2)
             }
             gameManager()
+        }
+        break;
+        case 9:{
+            refresh()
+            open("gameOver.html","_self")
         }
         break;
     }
@@ -292,7 +301,7 @@ a2Btn.onclick = function(){
             refresh()
             open("gameOver.html","_self")
         }
-
+        break;
     }
     
 }
@@ -306,7 +315,7 @@ function startGame(){
 function refresh(){ 
     console.log(PayDebt.offsetHeight)
     if(window.screen.width < 1200){
-        removeDebt.style.height = PayDebt.offsetHeight.toString()+"px"
+        removeDebt.style.height = (PayDebt.offsetHeight-4).toString()+"px"
     }
     //Lose the Game
     if(data.creditScore <= 300 && data.turn > 1 || data.limit < data.debt && data.turn > 1){
