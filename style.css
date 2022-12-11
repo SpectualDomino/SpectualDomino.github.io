@@ -80,8 +80,13 @@ img{
 }
 #payBtnContainer{
     display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+#container2{
+    display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
 }
 #removeDebt{
     height: 36px;
