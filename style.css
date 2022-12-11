@@ -21,7 +21,7 @@ footer{
     text-align:center;
 }
 #container{
-    height: 320px;
+    height: 100%;
     color: white;
 }
 body{
@@ -33,8 +33,8 @@ button{
     border: 1px gold solid;
     background-color: rgb(16, 143, 101);
     color: white;
-    height: 40px;
-    width: 200px;
+    height: 20%;
+    width: 8%;
     border-radius: 25px;
     margin: 40px;
     height: fit-content;
@@ -49,7 +49,7 @@ a:link,a:visited,a:hover,a:focus,a:active{
     color: white;
 }
 img{
-    max-width: 400px;
+    max-width: 30%;
 }
 #scores{
     position: fixed;
@@ -78,6 +78,8 @@ img{
 #a1Btn,#a2Btn{
     padding: 50px;
     width: 300px;
+    height: 250px;
+    flex-wrap: wrap;
 }
 
 #a1,#a2{
@@ -94,6 +96,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: baseline;
+    margin: 50px;
 }
 #removeDebt{
     height: 36px;
@@ -102,4 +105,32 @@ img{
     border: 1px gold solid;
     background-color: rgb(16, 143, 101);
     color: white;
+}
+#newDiv{
+    height: 500px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: rgb(16, 143, 101);
+    color: white;
+    border: 3px solid gold;
+    border-radius: 25px;
+    padding: 20px;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+#closeRules{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    letter-spacing: 0px;
+    margin: 20px;
 }

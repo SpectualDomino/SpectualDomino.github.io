@@ -12,7 +12,7 @@
 <body onload="gameManager()">
     <header><h1 id="turnTxt"></h1></header>
 
-    <button id="rules">Rules</button>
+    <button id="rules" onclick="openRules()">Rules</button>
 
     <div id="scores">
         <div id="balance"></div>
@@ -25,18 +25,19 @@
     </div>
 
     <div id="container">
-        <center></center>
         <center>
             <p id="question"></p>
-            <button id="a1Btn">
-                <h1>Option 1</h1>
-                <p id="a1"></p>
-            </button>
-            <button id="a2Btn">
-                <h1>Option 2</h1>
-                <p id="a2"></p>
-            </button>
-            
+            <div id="bottomJustify">
+                    
+                <button id="a1Btn">
+                    <h1>Option 1</h1>
+                    <p id="a1"></p>
+                </button>
+                <button id="a2Btn">
+                    <h1>Option 2</h1>
+                    <p id="a2"></p>
+                </button>
+            </div>
         </center>
     </div>
     <center id="payBtnContainer">
