@@ -298,7 +298,11 @@ function startGame(){
     open("game1.html","_self")
 }
 
-function refresh(){  
+function refresh(){ 
+    //Lose the Game
+    if(data.creditScore <= 300 && data.turn > 1 || data.limit < data.debt && data.turn > 1){
+        open("gameOver.html","_self")
+    } 
     //Win the game
     if(data.debt < 0 && data.turn > 0){
         localStorage.setItem("user",JSON.stringify(data))
@@ -312,10 +316,7 @@ function refresh(){
     creditScoreTxt.innerHTML = "Credit Score: " + Math.round(data.creditScore) 
     limitTxt.innerHTML = "Limit: $" + data.limit.toLocaleString()
     aprTxt.innerHTML = "APR: " + data.apr.toLocaleString() + "%"
-    //Lose the Game
-    if(data.creditScore <= 300 && data.turn > 1 || data.limit < data.debt && data.turn > 1){
-        open("gameOver.html","_self")
-    }
+
 }
 
 function playAgain(){
