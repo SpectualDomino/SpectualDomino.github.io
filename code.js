@@ -38,7 +38,7 @@ function openRules(){
     let rulesTxt = document.createElement("p")
     let closeBtn = document.createElement("button")
     closeBtn.innerHTML = "X"
-    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life.\n8. Every Turn your APR is added to your debt.\n9. You have 8 Turns to win"
+    rulesTxt.innerHTML = "1. To win the game you have to pay off your debt. \n2. To lose the game your debt has to go higher than your limit, credit score hits 300, or not pay off debt before end.\n3. Every Turn is considered one month your credit score only updates every two months.\n4. You earn $400 a turn which can be more on future turns.\n5. Your credit score is calculated with how many payments you make which has to be 5% of your debt to count as one, Try to make one payment a turn at least to win.\n6. Each turn you have to make a choice which could be benefit you or hurt you.\n7. Some choices have luck involved because sometimes you get lucky in life.\n8. Every Turn your APR is added to your debt.\n9. You have 8 Turns to win"
     newTitle.innerHTML = "Managing Credit"
     newDiv.id = "newDiv"
     closeBtn.id = "closeRules"
