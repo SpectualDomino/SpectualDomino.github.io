@@ -314,9 +314,8 @@ function startGame(){
 }
 
 function refresh(){ 
-    console.log(PayDebt.offsetHeight)
     if(window.screen.width < 1200){
-        removeDebt.style.height = (PayDebt.offsetHeight-4).toString()+"px"
+        PayDebt.style.height = (removeDebt.offsetHeight).toString()+"px"
     }
     //Lose the Game
     if(data.creditScore <= 300 && data.turn > 1 || data.limit < data.debt && data.turn > 1){
