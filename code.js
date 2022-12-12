@@ -314,7 +314,7 @@ function startGame(){
 }
 
 function refresh(){ 
-    if(window.screen.width < 1200){
+    if(window.screen.width > 1200){
         PayDebt.style.height = (removeDebt.offsetHeight).toString()+"px"
     }
     //Lose the Game
