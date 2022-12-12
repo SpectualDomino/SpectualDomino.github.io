@@ -200,6 +200,7 @@ a1Btn.onclick = function(){
                 gameManager()
             }
         }
+        break;
         case 8: {
             if(data.creditScore >= 600){
                 subtract("apr",4)

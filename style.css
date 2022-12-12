@@ -96,6 +96,9 @@ img{
     background-color: rgb(16, 143, 101);
     color: white;
 }
+#removeDebt::placeholder{
+    color: white;
+}
 #newDiv{
     height: 580px;
     width: 400px;
