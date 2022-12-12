@@ -93,7 +93,7 @@ function gameManager(){
         break;
         case 2:{
             questionTxt.innerHTML = "You need to get a loan choose"
-            a1.innerHTML = "Car loan for $2,000 but APR will +2% if credit score is less than 550 its 4%"
+            a1.innerHTML = "Car loan for $1,500 but APR will +2% if credit score is less than 550 its 4%"
             a2.innerHTML = "Car loan for $1,000 but APR will +4% if credit score is less than 550 its 6%"
         }
         break;
@@ -156,7 +156,7 @@ a1Btn.onclick = function(){
         }
         break;
         case 2:{
-            add("debt",2000)
+            add("debt",1500)
             if(data.creditScore >= 550){
                 add("apr", 2)
             }
