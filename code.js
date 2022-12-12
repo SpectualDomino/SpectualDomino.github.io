@@ -242,7 +242,8 @@ a2Btn.onclick = function(){
         break;
         case 3:{
             randNum = Math.round((Math.random() * 1))
-            if(randNum = 1){
+            console.log(randNum)
+            if(randNum > 0){
                 add("payIncrease",150)
             }
             else{
